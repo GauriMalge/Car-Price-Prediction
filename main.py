@@ -17,5 +17,7 @@ if __name__ == "__main__":
     print("🚀 Starting Car Price Predictor")
     print(f"📍 Server running on http://{HOST}:{PORT}")
     print("=" * 60)
-    demo.launch(server_name=HOST, server_port=PORT, share=False)
-
+    demo.launch(
+    server_name="0.0.0.0",
+    server_port=int(os.environ.get("PORT", 8000)),
+    share=False )
